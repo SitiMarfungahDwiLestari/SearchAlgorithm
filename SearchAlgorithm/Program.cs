@@ -48,7 +48,25 @@ namespace SearchAlgorithm
                 //obtain the index of the elements in the array
                 int mid = (lowerbound + upperbound) / 2;
                 int ctr = 1;
+                //loop to search for the elements in the array
+                while ((item 1 = arr[mid]) && (lowerbound <= upperbound))
+                    {
+                    if (item > arr[mid])
+                        lowerbound = mid + 1;
+                    else
+                        upperbound = mid - 1;
+                    mid = (lowerbound + upperbound) / 2;
+                    ctr++;
+                }
+                if (item == arr[mid])
+                    Console.WriteLine("\n" + item.ToString() + "found at position" + (mid + 1).ToString());
+                else
+                    Console.WriteLine("\n" + item.ToString() + "not found in the array\n");
+                Console.WriteLine("\nNumber of comparation: " + ctr);
+                Console.Write("\nContinue Search (y/n): ");
+                ch = char.Parse(Console.ReadLine());
             }
+            while ((ch == 'y') || (ch == 'Y'));
         }
         static void Main(string[] args)
         {
