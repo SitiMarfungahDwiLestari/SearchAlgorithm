@@ -70,7 +70,30 @@ namespace SearchAlgorithm
         }
         public void LinearSearch()
         {
-            
+            char ch;
+            //Search fo number of comparation
+            int ctr;
+            do
+            {
+                //Accept the number to be searched
+                Console.Write("\nEnter the element you want to search: ");
+                int item = Convert.ToInt32(Console.ReadLine());
+                ctr = 0;
+                for (i = 0; i < n; i++)
+                {
+                    ctr++;
+                    if (arr[i] == item)
+                    {
+                        Console.WriteLine("\n" + item.ToString() + "found add position" + (i + 1).ToString());
+                    }
+                }
+                if (i == n)
+                    Console.WriteLine("\n" + item.ToString() + "not found in the array");
+                Console.WriteLine("\nNumber of comparation: " + ctr);
+                Console.WriteLine("\nContinue search (y/n): ");
+                ch = char.Parse(Console.ReadLine());
+            }
+            while ((ch == 'y') || (ch == 'Y'));
         }
         static void Main(string[] args)
         {
