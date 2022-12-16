@@ -42,6 +42,9 @@ namespace SearchAlgorithm
                 //Accept the number to be search
                 Console.Write("Enter element want to you search: ");
                 int item = Convert.ToInt32(Console.ReadLine());
+                //Apply binary search
+                int lowerbound = 0;
+                int upperbound = n - 1;
             }
         }
         static void Main(string[] args)
