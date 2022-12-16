@@ -8,8 +8,21 @@ namespace SearchAlgorithm
         int[] arr = new int[20];
         //Number of elements in the array 
         int n;
-        //Get thr number of elements to store in the array
+        //Get the number of elements to store in the array
         int i;
+        public void input()
+        {
+            while (true)
+            {
+                Console.Write("Enter the number of elements in the array: ");
+                string s = Console.ReadLine();
+                n = Int32.Parse(s);
+                if ((n > 0) && (n <= 20))
+                    break;
+                else
+                    Console.WriteLine("\nArray should have minimum 1 and maximum 20 elements.\n");
+            }
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
