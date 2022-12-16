@@ -68,6 +68,10 @@ namespace SearchAlgorithm
             }
             while ((ch == 'y') || (ch == 'Y'));
         }
+        public void LinearSearch()
+        {
+            
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
